@@ -7,5 +7,11 @@ class CustomerValidator {
             throw new IllegalArgumentException("Email jest niepoprawny");
         }
     }
+
+    void validateAge(String dateOfBirth) {
+        if (dateOfBirth == null || dateOfBirth.endsWith("2020")){
+            throw new IllegalArgumentException("Za młody");
+        }
+    }
 }
 

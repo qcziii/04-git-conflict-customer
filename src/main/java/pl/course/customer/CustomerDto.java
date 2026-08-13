@@ -4,7 +4,8 @@ record CustomerDto(
         Long id,
         String firstName,
         String lastName,
-        String email
+        String email,
+        String dateOfBirth
 ) {
 }
 

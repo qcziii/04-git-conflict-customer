@@ -10,7 +10,7 @@ class CustomerMapperTest {
 
     @Test
     void shouldMapCustomerToDto() {
-        Customer customer = new Customer(1L, "Anna", "Nowak", "anna.nowak@example.com");
+        Customer customer = new Customer(1L, "Anna", "Nowak", "anna.nowak@example.com", "11031998");
 
         CustomerDto dto = mapper.toDto(customer);
 
