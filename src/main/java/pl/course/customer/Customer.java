@@ -12,37 +12,37 @@ class Customer {
     private final String phoneNumber;
 
     Customer(Long id, String firstName, String lastName, String email, LocalDate dateOfBirth, String phoneNumber) {
-            this.id = id;
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.email = email;
-            this.dateOfBirth = dateOfBirth;
-            this.phoneNumber = phoneNumber;
-        }
-
-        Long getId () {
-            return id;
-        }
-
-        String getFirstName () {
-            return firstName;
-        }
-
-        String getLastName () {
-            return lastName;
-        }
-
-        String getEmail () {
-            return email;
-        }
-
-        public LocalDate getDateOfBirth () {
-            return dateOfBirth;
-        }
-
-        public String getPhoneNumber () {
-            return phoneNumber;
-        }
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.dateOfBirth = dateOfBirth;
+        this.phoneNumber = phoneNumber;
     }
+
+    Long getId() {
+        return id;
+    }
+
+    String getFirstName() {
+        return firstName;
+    }
+
+    String getLastName() {
+        return lastName;
+    }
+
+    String getEmail() {
+        return email;
+    }
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+}
 
 
