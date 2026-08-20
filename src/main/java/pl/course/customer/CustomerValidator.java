@@ -6,6 +6,8 @@ class CustomerValidator {
         if (email == null || !email.contains("@")) {
             throw new IllegalArgumentException("Email jest niepoprawny");
         }
+
+
     }
 }
 
