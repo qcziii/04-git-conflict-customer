@@ -2,6 +2,8 @@ package pl.course.customer;
 
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
+
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -17,6 +19,21 @@ class CustomerValidatorTest {
     @Test
     void shouldRejectInvalidEmail() {
         assertThrows(IllegalArgumentException.class, () -> validator.validateEmail("wrong-email"));
+    }
+
+    @Test
+    void shouldThrowExceptionWhenDateOfBirthIsInTheFuture() {
+        LocalDate futureDate = LocalDate.now().plusDays(1);
+
+        assertThrows(IllegalArgumentException.class, () -> new Customer(
+                        1L,
+                        "Jan",
+                        "Kowalski",
+                        "jan@example.com",
+                        futureDate,
+                "123123123"
+                )
+        );
     }
 }
 
