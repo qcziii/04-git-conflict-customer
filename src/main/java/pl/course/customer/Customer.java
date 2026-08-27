@@ -11,9 +11,9 @@ class Customer {
     private final LocalDate dateOfBirth;
 
     Customer(Long id, String firstName, String lastName, String email, LocalDate dateOfBirth) {
-        if (dateOfBirth == null || dateOfBirth.isAfter(LocalDate.now())) {
-            throw new IllegalArgumentException("Invalid date of birth");
-        }
+        CustomerValidator validator = new CustomerValidator();
+
+        validator.validateDateOfBirth(dateOfBirth);
 
         this.id = id;
         this.firstName = firstName;
