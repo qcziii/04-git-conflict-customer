@@ -30,7 +30,8 @@ class CustomerValidatorTest {
                         "Jan",
                         "Kowalski",
                         "jan@example.com",
-                        futureDate
+                        futureDate,
+                "123123123"
                 )
         );
     }

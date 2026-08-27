@@ -6,10 +6,12 @@ import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class CustomerMapperTest {
 
     private final CustomerMapper mapper = new CustomerMapper();
+    private final CustomerValidator validator = new CustomerValidator();
 
     @Test
     void shouldMapCustomerToDto() {
@@ -27,8 +29,14 @@ class CustomerMapperTest {
     }
 
     @Test
+    void shouldntMapCustomerToDtoWithNullFilds() {
+
+        assertThrows(IllegalArgumentException.class, () -> new Customer(null, null, null, null, null, null));
+    }
+
+    @Test
     void shouldMapCustomerToDtoWithNullFilds() {
-        Customer customer = new Customer(null, null, null, null, null, null);
+        Customer customer = new Customer(null, null, null, null, LocalDate.of(1990, 5, 20), null);
 
         CustomerDto dto = mapper.toDto(customer);
 
