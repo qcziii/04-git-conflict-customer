@@ -8,17 +8,18 @@ class Customer {
     private final String firstName;
     private final String lastName;
     private final String email;
+    private final String phoneNumber;
     private final LocalDate dateOfBirth;
 
-    Customer(Long id, String firstName, String lastName, String email, LocalDate dateOfBirth) {
+    Customer(Long id, String firstName, String lastName, String email, LocalDate dateOfBirth, String phoneNumber) {
         CustomerValidator validator = new CustomerValidator();
-
         validator.validateDateOfBirth(dateOfBirth);
 
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.phoneNumber = phoneNumber;
         this.dateOfBirth = dateOfBirth;
 
     }
@@ -37,6 +38,10 @@ class Customer {
 
     String getEmail() {
         return email;
+    }
+
+    String getPhoneNumber() {
+        return phoneNumber;
     }
 
     LocalDate getDateOfBirth() {
