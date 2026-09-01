@@ -22,6 +22,7 @@ class CustomerMapperTest {
         assertEquals("Nowak", dto.lastName());
         assertEquals("anna.nowak@example.com", dto.email());
         assertEquals("+48123456789", dto.phoneNumber());
+        assertEquals(dateOfBirth, dto.dateOfBirth());
     }
 }
 
