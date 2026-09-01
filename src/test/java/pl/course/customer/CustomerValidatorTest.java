@@ -20,6 +20,7 @@ class CustomerValidatorTest {
     void shouldRejectInvalidEmail() {
         assertThrows(IllegalArgumentException.class, () -> validator.validateEmail("wrong-email"));
     }
+
     @Test
     void shouldAcceptCustomer() {
         assertThrows(IllegalArgumentException.class, () -> validator.validateAge(LocalDate.now().minusYears(17)));

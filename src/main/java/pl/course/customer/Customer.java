@@ -16,7 +16,6 @@ class Customer {
         this.lastName = lastName;
         this.email = email;
         this.dateOfBirth = dateOfBirth;
-
     }
 
     Long getId() {

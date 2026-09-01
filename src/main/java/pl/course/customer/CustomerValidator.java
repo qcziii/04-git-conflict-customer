@@ -9,11 +9,12 @@ class CustomerValidator {
             throw new IllegalArgumentException("Email jest niepoprawny");
         }
     }
+
     void validateAge(LocalDate dateOfBirth) {
         if (dateOfBirth == null) {
             throw new IllegalArgumentException("Data urodzenia jest wymagana");
         }
-        if(dateOfBirth.isAfter(LocalDate.now().minusYears(18))) {
+        if (dateOfBirth.isAfter(LocalDate.now().minusYears(18))) {
             throw new IllegalArgumentException("Klient musi miec 18 lat");
         }
     }
