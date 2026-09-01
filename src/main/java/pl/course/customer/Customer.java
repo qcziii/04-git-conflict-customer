@@ -6,9 +6,9 @@ class Customer {
     private final String firstName;
     private final String lastName;
     private final String email;
-    private final Long phoneNumber;
+    private final int phoneNumber;
 
-    public Customer(Long id, String firstName, String lastName, String email, Long phoneNumber) {
+    public Customer(Long id, String firstName, String lastName, String email, int phoneNumber) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -30,6 +30,10 @@ class Customer {
 
     String getEmail() {
         return email;
+    }
+
+    Integer getPhoneNumber() {
+        return phoneNumber;
     }
 }
 
