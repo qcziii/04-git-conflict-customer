@@ -6,9 +6,9 @@ class Customer {
     private final String firstName;
     private final String lastName;
     private final String email;
-    private final int phoneNumber;
+    private final String phoneNumber;
 
-    public Customer(Long id, String firstName, String lastName, String email, int phoneNumber) {
+    public Customer(Long id, String firstName, String lastName, String email, String phoneNumber) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -32,7 +32,7 @@ class Customer {
         return email;
     }
 
-    Integer getPhoneNumber() {
+    String getPhoneNumber() {
         return phoneNumber;
     }
 }

@@ -5,7 +5,7 @@ record CustomerDto(
         String firstName,
         String lastName,
         String email,
-        Integer phoneNumber
+        String phoneNumber
 ) {
 }
 
