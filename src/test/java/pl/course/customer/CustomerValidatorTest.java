@@ -2,6 +2,8 @@ package pl.course.customer;
 
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
+
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -17,6 +19,12 @@ class CustomerValidatorTest {
     @Test
     void shouldRejectInvalidEmail() {
         assertThrows(IllegalArgumentException.class, () -> validator.validateEmail("wrong-email"));
+    }
+
+    @Test
+    void shouldAcceptCustomer() {
+        assertThrows(IllegalArgumentException.class, () -> validator.validateAge(LocalDate.now().minusYears(17)));
+
     }
 }
 
