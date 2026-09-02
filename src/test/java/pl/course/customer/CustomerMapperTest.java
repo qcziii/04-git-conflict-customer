@@ -10,7 +10,7 @@ class CustomerMapperTest {
 
     @Test
     void shouldMapCustomerToDto() {
-        Customer customer = new Customer(1L, "Anna", "Nowak", "anna.nowak@example.com","777555444");
+        Customer customer = new Customer(1L, "Anna", "Nowak", "anna.nowak@example.com");
 
         CustomerDto dto = mapper.toDto(customer);
 
@@ -18,8 +18,6 @@ class CustomerMapperTest {
         assertEquals("Anna", dto.firstName());
         assertEquals("Nowak", dto.lastName());
         assertEquals("anna.nowak@example.com", dto.email());
-        assertEquals("777555444", dto.phoneNumber());
-
     }
 }
 
