@@ -8,7 +8,7 @@ class CustomerMapper {
                 customer.getFirstName(),
                 customer.getLastName(),
                 customer.getEmail(),
-                customer.get
+                customer.getPhoneNumber()
         );
     }
 }
