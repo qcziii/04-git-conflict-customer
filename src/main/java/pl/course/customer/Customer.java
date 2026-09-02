@@ -1,22 +1,35 @@
 package pl.course.customer;
 
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.util.Date;
+
 class Customer {
 
     private final Long id;
     private final String firstName;
     private final String lastName;
     private final String email;
-    private final String dateOfBirth;
     private final String phoneNumber;
-
+    private final String dateOfBirth;
 
     public Customer(Long id, String firstName, String lastName, String email, String phoneNumber,String dateOfBirth) {
+        validateAge(dateOfBirth);
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.dateOfBirth = dateOfBirth;
+    }
+
+    private void validateAge(String dateOfBirth) {
+        LocalDate birthDate = LocalDate.parse(dateOfBirth);
+        long age = ChronoUnit.YEARS.between(birthDate, LocalDate.now());
+        if (age < 18) {
+            throw new IllegalArgumentException("Age must be over 18");
+        }
     }
 
     Long getId() {
@@ -35,12 +48,14 @@ class Customer {
         return email;
     }
 
+    String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
     String getPhoneNumber() {
         return phoneNumber;
     }
 
-    String getDateOfBirth() {
-        return dateOfBirth;
     }
 }
 
