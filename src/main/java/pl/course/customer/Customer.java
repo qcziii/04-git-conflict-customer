@@ -1,5 +1,8 @@
 package pl.course.customer;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
 class Customer {
 
     private final Long id;
@@ -7,13 +10,15 @@ class Customer {
     private final String lastName;
     private final String email;
     private final String phoneNumber;
+    private final LocalDate dateOfBirth;
 
-    public Customer(Long id, String firstName, String lastName, String email, String phoneNumber) {
+    public Customer(Long id, String firstName, String lastName, String email, String phoneNumber, LocalDate dateOfBirth) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.phoneNumber = phoneNumber;
+        this.dateOfBirth = dateOfBirth;
     }
 
     Long getId() {
@@ -32,8 +37,14 @@ class Customer {
         return email;
     }
 
+    LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
     String getPhoneNumber() {
         return phoneNumber;
     }
+
 }
+
 
