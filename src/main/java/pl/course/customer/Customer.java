@@ -1,17 +1,21 @@
 package pl.course.customer;
 
+import java.util.Date;
+
 class Customer {
 
     private final Long id;
     private final String firstName;
     private final String lastName;
     private final String email;
+    private final String dateOfBirth;
 
-    Customer(Long id, String firstName, String lastName, String email) {
+    public Customer(Long id, String firstName, String lastName, String email, String dateOfBirth) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.dateOfBirth = dateOfBirth;
     }
 
     Long getId() {
@@ -28,6 +32,10 @@ class Customer {
 
     String getEmail() {
         return email;
+    }
+
+    String getDateOfBirth() {
+        return dateOfBirth;
     }
 }
 
