@@ -9,13 +9,16 @@ class Customer {
     private final String lastName;
     private final String email;
     private final LocalDate dateOfBirth;
+    private final String phoneNumber;
 
     Customer(Long id, String firstName, String lastName, String email, LocalDate dateOfBirth) {
+     {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.dateOfBirth = dateOfBirth;
+        this.phoneNumber = phoneNumber;
     }
 
     Long getId() {
@@ -36,6 +39,10 @@ class Customer {
 
     public LocalDate getDateOfBirth() {
         return dateOfBirth;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 }
 
