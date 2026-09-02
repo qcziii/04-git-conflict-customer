@@ -1,9 +1,7 @@
 package pl.course.customer;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
-import java.util.Date;
 
 class Customer {
 
@@ -12,9 +10,9 @@ class Customer {
     private final String lastName;
     private final String email;
     private final String phoneNumber;
-    private final String dateOfBirth;
+    private final LocalDate dateOfBirth;
 
-    public Customer(Long id, String firstName, String lastName, String email, String phoneNumber,String dateOfBirth) {
+    public Customer(Long id, String firstName, String lastName, String email, String phoneNumber, LocalDate dateOfBirth) {
         validateAge(dateOfBirth);
         this.id = id;
         this.firstName = firstName;
@@ -24,9 +22,8 @@ class Customer {
         this.dateOfBirth = dateOfBirth;
     }
 
-    private void validateAge(String dateOfBirth) {
-        LocalDate birthDate = LocalDate.parse(dateOfBirth);
-        long age = ChronoUnit.YEARS.between(birthDate, LocalDate.now());
+    private void validateAge(LocalDate dateOfBirth) {
+        long age = ChronoUnit.YEARS.between(dateOfBirth, LocalDate.now());
         if (age < 18) {
             throw new IllegalArgumentException("Age must be over 18");
         }
@@ -48,7 +45,7 @@ class Customer {
         return email;
     }
 
-    String getDateOfBirth() {
+    LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
@@ -56,6 +53,6 @@ class Customer {
         return phoneNumber;
     }
 
-    }
 }
+
 
