@@ -1,7 +1,5 @@
 package pl.course.customer;
 
-import java.util.Date;
-
 class Customer {
 
     private final Long id;
@@ -9,12 +7,15 @@ class Customer {
     private final String lastName;
     private final String email;
     private final String dateOfBirth;
+    private final String phoneNumber;
 
-    public Customer(Long id, String firstName, String lastName, String email, String dateOfBirth) {
+
+    public Customer(Long id, String firstName, String lastName, String email, String phoneNumber,String dateOfBirth) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.phoneNumber = phoneNumber;
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -32,6 +33,10 @@ class Customer {
 
     String getEmail() {
         return email;
+    }
+
+    String getPhoneNumber() {
+        return phoneNumber;
     }
 
     String getDateOfBirth() {
