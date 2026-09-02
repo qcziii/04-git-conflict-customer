@@ -11,8 +11,7 @@ class Customer {
     private final LocalDate dateOfBirth;
     private final String phoneNumber;
 
-    Customer(Long id, String firstName, String lastName, String email, LocalDate dateOfBirth) {
-     {
+    Customer(Long id, String firstName, String lastName, String email, LocalDate dateOfBirth, String phoneNumber) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
