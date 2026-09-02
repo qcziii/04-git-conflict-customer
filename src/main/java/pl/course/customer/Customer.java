@@ -13,20 +13,12 @@ class Customer {
     private final LocalDate dateOfBirth;
 
     public Customer(Long id, String firstName, String lastName, String email, String phoneNumber, LocalDate dateOfBirth) {
-        validateAge(dateOfBirth);
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.dateOfBirth = dateOfBirth;
-    }
-
-    private void validateAge(LocalDate dateOfBirth) {
-        long age = ChronoUnit.YEARS.between(dateOfBirth, LocalDate.now());
-        if (age < 18) {
-            throw new IllegalArgumentException("Age must be over 18");
-        }
     }
 
     Long getId() {
