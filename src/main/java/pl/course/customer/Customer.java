@@ -6,12 +6,17 @@ class Customer {
     private final String firstName;
     private final String lastName;
     private final String email;
+    private final String dateOfBirth;
 
-    Customer(Long id, String firstName, String lastName, String email) {
+    Customer(Long id, String firstName, String lastName, String email, String dateOfBirth) {
+        if (dateOfBirth.matches("")) {
+            throw new IllegalArgumentException("Date birth cannot be from future");
+        }
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.dateOfBirth = dateOfBirth;
     }
 
     Long getId() {
@@ -28,6 +33,10 @@ class Customer {
 
     String getEmail() {
         return email;
+    }
+
+    String getDateOfBirth() {
+        return dateOfBirth;
     }
 }
 
