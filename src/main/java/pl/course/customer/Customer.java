@@ -1,17 +1,16 @@
 package pl.course.customer;
 
+import java.time.LocalDate;
+
 class Customer {
 
     private final Long id;
     private final String firstName;
     private final String lastName;
     private final String email;
-    private final String dateOfBirth;
+    private final LocalDate dateOfBirth;
 
-    Customer(Long id, String firstName, String lastName, String email, String dateOfBirth) {
-        if (dateOfBirth.matches("")) {
-            throw new IllegalArgumentException("Date birth cannot be from future");
-        }
+    Customer(Long id, String firstName, String lastName, String email, LocalDate dateOfBirth) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -35,7 +34,7 @@ class Customer {
         return email;
     }
 
-    String getDateOfBirth() {
+    LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 }
