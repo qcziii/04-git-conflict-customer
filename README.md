@@ -17,9 +17,9 @@ Repozytorium startuje z jednym DTO i mapperem.
 5. Dodaj test mapowania.
 6. Zrób 2-3 logiczne commity.
 
-### Osoba B
+### Osoba B - to ja 
 
-1. Utwórz branch `feature/customer-date-of-birth`.
+1. Utwórz branch `feature/customer-date-of-birth/prutkowski`.
 2. Dodaj pole `dateOfBirth` do `Customer`.
 3. Dodaj pole `dateOfBirth` do `CustomerDto`.
 4. Zaktualizuj `CustomerMapper`.

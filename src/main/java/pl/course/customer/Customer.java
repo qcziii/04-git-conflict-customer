@@ -1,5 +1,7 @@
 package pl.course.customer;
 
+import java.time.LocalDate;
+
 class Customer {
 
     private final Long id;
@@ -7,12 +9,14 @@ class Customer {
     private final String lastName;
     private final String email;
     private final String phoneNumber;
+    private final LocalDate dateOfBirth;
 
-     Customer(Long id, String firstName, String lastName, String email, String phoneNumber) {
+    Customer(Long id, String firstName, String lastName, String email, LocalDate dateOfBirth, String phoneNumber) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.dateOfBirth = dateOfBirth;
         this.phoneNumber = phoneNumber;
     }
 
@@ -33,5 +37,9 @@ class Customer {
     }
 
     String getPhoneNumber() {return phoneNumber;}
+
+    LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
 }
 
