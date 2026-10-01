@@ -9,13 +9,17 @@ class Customer {
     private final String lastName;
     private final String email;
     private final LocalDate dateOfBirth;
+    private final Integer phoneNumber;
 
-    Customer(Long id, String firstName, String lastName, String email, LocalDate dateOfBirth) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.dateOfBirth = dateOfBirth;
+    Customer(Long id, String firstName, String lastName, String email, LocalDate dateOfBirth, Integer phoneNumber) {
+        {
+            this.id = id;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.email = email;
+            this.dateOfBirth = dateOfBirth;
+            this.phoneNumber = phoneNumber;
+        }
     }
 
     Long getId() {
@@ -37,5 +41,10 @@ class Customer {
     public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
+
+    public Integer getPhoneNumber() {
+        return phoneNumber;
+    }
 }
+
 
