@@ -2,6 +2,8 @@ package pl.course.customer;
 
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CustomerMapperTest {
@@ -10,7 +12,8 @@ class CustomerMapperTest {
 
     @Test
     void shouldMapCustomerToDto() {
-        Customer customer = new Customer(1L, "Anna", "Nowak", "anna.nowak@example.com",888000888);
+        Customer customer = new Customer(1L, "Anna", "Nowak", "anna.nowak@example.com", LocalDate.of(1994,8,14),888000888);
+
 
         CustomerDto dto = mapper.toDto(customer);
 
@@ -18,6 +21,7 @@ class CustomerMapperTest {
         assertEquals("Anna", dto.firstName());
         assertEquals("Nowak", dto.lastName());
         assertEquals("anna.nowak@example.com", dto.email());
+        assertEquals(LocalDate.of(1994,8,14),dto.dateOfBirth());
         assertEquals(888000888,dto.phoneNumber());
     }
 }
