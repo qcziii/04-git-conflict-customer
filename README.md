@@ -1,4 +1,8 @@
+**NIE MERGOWAC DO MAINA BO NOGI Z DUPY POWYRYWAM**
+
 # 04 - Git: branch, pull request i konflikt
+
+
 
 ## Cel
 
