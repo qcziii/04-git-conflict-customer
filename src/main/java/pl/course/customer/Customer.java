@@ -6,13 +6,16 @@ class Customer {
     private final String firstName;
     private final String lastName;
     private final String email;
+    private final String phoneNumber;
 
-    Customer(Long id, String firstName, String lastName, String email) {
+    Customer(Long id, String firstName, String lastName, String email, String phoneNumber) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.phoneNumber = phoneNumber;
     }
+
 
     Long getId() {
         return id;
@@ -28,6 +31,10 @@ class Customer {
 
     String getEmail() {
         return email;
+    }
+
+    String getPhoneNumber() {
+        return phoneNumber;
     }
 }
 
