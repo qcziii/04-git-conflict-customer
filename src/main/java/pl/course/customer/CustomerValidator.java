@@ -11,6 +11,9 @@ class CustomerValidator {
     }
 
     void validateAge(LocalDateTime dateOfBirth) {
+        if (dateOfBirth == null) {
+            throw new IllegalArgumentException("Data urodzenia jest wymagana");
+        }
         if (dateOfBirth.isAfter(LocalDateTime.now().minusYears(18L))) {
             throw new IllegalArgumentException("Użytkownik jest niepełnoletni");
         }
