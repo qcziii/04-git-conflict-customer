@@ -21,7 +21,7 @@ class CustomerMapperTest {
         assertEquals("Anna", dto.firstName());
         assertEquals("Nowak", dto.lastName());
         assertEquals("anna.nowak@example.com", dto.email());
-        assertEquals("1996-11-11", dto.dateOfBirth());
+        assertEquals(LocalDate.of(1996,11,11), dto.dateOfBirth());
     }
 }
 

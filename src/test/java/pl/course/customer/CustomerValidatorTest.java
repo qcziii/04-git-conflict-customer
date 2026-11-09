@@ -28,7 +28,7 @@ class CustomerValidatorTest {
 
     @Test
     void shouldRejectDateOfBirth() {
-        assertThrows(IllegalArgumentException.class, () -> validator.validateDateOfBirth(LocalDate.of(2028, 11, 11)));
+        assertThrows(IllegalArgumentException.class, () -> validator.validateDateOfBirth(LocalDate.now().plusYears(1)));
     }
 }
 
