@@ -28,7 +28,7 @@ class CustomerValidatorTest {
 
     @Test
     void shouldThrowWhenUserIsMinor() {
-        assertThrows(IllegalArgumentException.class, () -> validator.validateAge(LocalDateTime.of(2010, 1,1,15,0)));
+        assertThrows(IllegalArgumentException.class, () -> validator.validateAge(LocalDateTime.now().minusYears(17)));
     }
 }
 
