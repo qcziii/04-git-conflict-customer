@@ -14,7 +14,7 @@ Repozytorium startuje z jednym DTO i mapperem.
 
 ### Osoba A
 
-1. Utwórz branch `feature/customer-phone-number`.
+1. Utwórz branch `feature/customer-phone-inicjaly`.
 2. Dodaj pole `phoneNumber` do `Customer`.
 3. Dodaj pole `phoneNumber` do `CustomerDto`.
 4. Zaktualizuj `CustomerMapper`.
@@ -23,7 +23,7 @@ Repozytorium startuje z jednym DTO i mapperem.
 
 ### Osoba B
 
-1. Utwórz branch `feature/customer-date-of-birth`.
+1. Utwórz branch `feature/customer-date-of-birth-inicjaly`.
 2. Dodaj pole `dateOfBirth` do `Customer`.
 3. Dodaj pole `dateOfBirth` do `CustomerDto`.
 4. Zaktualizuj `CustomerMapper`.
