@@ -7,7 +7,8 @@ record CustomerDto(
         String firstName,
         String lastName,
         String email,
-        LocalDateTime dateOfBirth
+        LocalDateTime dateOfBirth,
+        String phoneNumber
 ) {
 }
 
