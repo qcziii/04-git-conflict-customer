@@ -12,7 +12,7 @@ class CustomerValidator {
 
     void validateDateOfBirth(LocalDate dateOfBirth) {
         if (dateOfBirth == null || dateOfBirth.isAfter(LocalDate.now())) {
-            throw new IllegalArgumentException("urodzony w przyszlosci");
+            throw new IllegalArgumentException("Data urodzenia jest wymagana i nie może być w przyszłości");
         }
     }
 }
